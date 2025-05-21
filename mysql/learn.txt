@@ -1,0 +1,168 @@
+
+
+### **1. Data Definition Language (DDL) Keywords**
+
+These are used for defining and modifying the database structure.
+
+1 CREATE DATABASE: Creates a new database.
+2 DROP DATABASE: Deletes a database.
+3 CREATE TABLE: Creates a new table.
+4 DROP TABLE: Deletes a table.
+5 ALTER TABLE: Modifies an existing table (e.g., add/drop columns).
+6 RENAME TABLE: Renames a table.
+7 TRUNCATE TABLE: Removes all rows from a table, but keeps the structure.
+8 SHOW TABLES: Displays all tables in a database.
+9 DESCRIBE: Displays the structure of a table.
+10 CREATE INDEX: Creates an index on one or more columns.
+11 DROP INDEX: Removes an index.
+
+### **2. Data Manipulation Language (DML) Keywords**
+
+These are used for manipulating data within the tables.
+
+* **SELECT**: Retrieves data from one or more tables.
+* **INSERT INTO**: Adds new rows to a table.
+* **UPDATE**: Modifies existing rows in a table.
+* **DELETE**: Deletes rows from a table.
+* **REPLACE**: Inserts new rows or updates existing ones.
+* **SELECT DISTINCT**: Retrieves unique rows.
+* **SELECT INTO**: Copies data from one table to another.
+
+### **3. Data Control Language (DCL) Keywords**
+
+Used to control access and permissions.
+
+* **GRANT**: Assigns privileges to users.
+* **REVOKE**: Removes privileges from users.
+
+### **4. Transaction Control Keywords**
+
+Used for managing transactions.
+
+* **START TRANSACTION**: Begins a new transaction.
+* **COMMIT**: Saves all changes made during the transaction.
+* **ROLLBACK**: Reverts the changes made during the transaction.
+* **SAVEPOINT**: Sets a point to which you can roll back.
+* **RELEASE SAVEPOINT**: Removes a savepoint.
+* **SET TRANSACTION**: Sets transaction characteristics (e.g., isolation level).
+
+### **5. SQL Functions in MySQL**
+
+MySQL supports many built-in functions, including:
+
+#### **String Functions**
+
+* **CONCAT()**: Concatenates two or more strings.
+* **LENGTH()**: Returns the length of a string in bytes.
+* **LOWER()**: Converts a string to lowercase.
+* **UPPER()**: Converts a string to uppercase.
+* **SUBSTRING()**: Extracts a substring from a string.
+* **REPLACE()**: Replaces all occurrences of a substring within a string.
+* **TRIM()**: Removes leading and trailing spaces from a string.
+
+#### **Numeric Functions**
+
+* **ABS()**: Returns the absolute value of a number.
+* **ROUND()**: Rounds a number to a specified decimal place.
+* **FLOOR()**: Returns the largest integer less than or equal to a number.
+* **CEIL()**: Returns the smallest integer greater than or equal to a number.
+* **RAND()**: Returns a random floating-point value.
+
+#### **Date and Time Functions**
+
+* **NOW()**: Returns the current date and time.
+* **CURDATE()**: Returns the current date.
+* **CURTIME()**: Returns the current time.
+* **DATE()**: Extracts the date part from a datetime value.
+* **YEAR()**: Extracts the year from a date.
+* **MONTH()**: Extracts the month from a date.
+* **DAY()**: Extracts the day from a date.
+* **DATEDIFF()**: Returns the difference in days between two dates.
+* **DATE\_ADD()**: Adds a specified time interval to a date.
+
+#### **Aggregate Functions**
+
+* **COUNT()**: Returns the number of rows.
+* **SUM()**: Returns the sum of a numeric column.
+* **AVG()**: Returns the average value of a numeric column.
+* **MIN()**: Returns the minimum value in a set.
+* **MAX()**: Returns the maximum value in a set.
+
+#### **Conditional Functions**
+
+* **IFNULL()**: Returns a specified value if the expression is NULL.
+* **COALESCE()**: Returns the first non-null value in the list.
+* **CASE**: Returns a value based on a set of conditions.
+
+#### **Mathematical Functions**
+
+* **PI()**: Returns the value of pi.
+* **SQRT()**: Returns the square root of a number.
+* **POWER()**: Raises a number to the power of another number.
+* **MOD()**: Returns the remainder of a division.
+
+#### **Conversion Functions**
+
+* **CAST()**: Converts a value to a specific data type.
+* **CONVERT()**: Converts a value from one data type to another.
+
+#### **Other Functions**
+
+* **GROUP\_CONCAT()**: Returns a concatenated string of non-NULL values from a group.
+* **NOW()**: Returns the current timestamp.
+* **UUID()**: Generates a unique identifier.
+
+### **6. Comparison Operators**
+
+Used for comparing values.
+
+* **=**: Equal to.
+* **<> or !=**: Not equal to.
+* **<**: Less than.
+* **>**: Greater than.
+* **<=**: Less than or equal to.
+* **>=**: Greater than or equal to.
+* **BETWEEN**: Checks if a value is within a range.
+* **IN()**: Checks if a value is within a set of values.
+* **LIKE**: Pattern matching using wildcards.
+* **IS NULL**: Checks if a value is NULL.
+
+### **7. Logical Operators**
+
+Used for logical operations.
+
+* **AND**: Returns true if both conditions are true.
+* **OR**: Returns true if at least one condition is true.
+* **NOT**: Negates the condition.
+
+### **8. Join Keywords**
+
+Used for combining rows from two or more tables.
+
+* **INNER JOIN**: Combines rows from two tables where the condition is true.
+* **LEFT JOIN**: Combines rows from the left table with matching rows from the right table.
+* **RIGHT JOIN**: Combines rows from the right table with matching rows from the left table.
+* **FULL JOIN**: Combines rows from both tables (MySQL does not natively support this but can be simulated).
+* **CROSS JOIN**: Returns the Cartesian product of two tables.
+
+### **9. Indexes and Constraints**
+
+* **PRIMARY KEY**: A unique identifier for a row in the table.
+* **FOREIGN KEY**: Establishes a link between columns in different tables.
+* **UNIQUE**: Ensures that all values in a column are different.
+* **CHECK**: Ensures that values in a column meet a certain condition (in MySQL 8.0+).
+* **DEFAULT**: Sets a default value for a column.
+* **INDEX**: Improves the speed of data retrieval.
+* **Not Null**
+
+### **10. User and Privilege Management**
+
+* **CREATE USER**: Creates a new user.
+* **DROP USER**: Deletes a user.
+* **ALTER USER**: Modifies user details.
+* **SHOW GRANTS**: Displays the privileges granted to a user.
+* **SET PASSWORD**: Sets the password for a user.
+
+---
+
+
