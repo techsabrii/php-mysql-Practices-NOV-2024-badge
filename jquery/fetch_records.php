@@ -16,7 +16,7 @@ $usernameFilter = isset($_GET['username']) ? $conn->real_escape_string($_GET['us
 if ($usernameFilter) {
     $sql = "SELECT id, fullname, username, email, created_at FROM users WHERE username = '$usernameFilter' ORDER BY id DESC";
 } else {
-    $sql = "SELECT id, fullname, username, email, created_at FROM users ORDER BY id DESC";
+    $sql = "SELECT id, fullname, username, email, created_at FROM users ";
 }
 
 $result = $conn->query($sql);

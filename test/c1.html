@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery .ready() Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 id="message1">Hello!</h1>
+
+    <script>
+        $(document).ready(function() {
+            $('#message1').text('DOM is fully loaded! with the help of jquery');
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DOMContentLoaded</title>
+</head>
+<body>
+    <h1 id="message2">Hello!</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('message2').textContent = 'DOM is fully loaded!';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery vs JavaScript Example</title>
+    <style>
+        .red {
+            color: red;
+            font-weight: bold;
+        }
+
+        .blue {
+            color: rgb(0, 21, 255);
+            font-weight: bold;
+        }
+
+        .brown {
+            color: rgb(117, 26, 23);
+            font-weight: bold;
+        }
+
+        .green {
+            color: rgba(0, 255, 4, 0.778);
+            font-weight: bold;
+        }
+    </style>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2 id="jq-h">jQuery Heading</h2>
+    <button id="jq-text">Change Text </button>
+    <button id="jq-html">Change HTML </button>
+    <button id="jq-hide">Hide </button>
+    <button id="jq-show">Show </button>
+    <button id="jq-toggle">Toggle </button>
+    <button id="jq-add-red">Add Class Red</button>
+    <button id="jq-add-blue">Add Class Blue</button>
+    <button id="jq-add-brown">Add Class Brown</button>
+    <button id="jq-add-green">Add Class Green</button>
+    <button id="jq-add-class">Mnual add class</button>
+    <button id="jq-remove-class">Remove Class </button>
+
+    <hr>
+
+
+
+    <script>
+        $(document).ready(function () {
+            function setColorClass(className) {
+                $("#jq-h").removeClass("red blue brown green").addClass(className);
+            }
+
+            $("#jq-text").click(function () {
+                $("#jq-h").text("Text changed with jQuery");
+            });
+
+            $("#jq-html").click(function () {
+                $("#jq-h").html("<u><b>Bold HTML changed with jQuery</b></u>");
+            });
+
+            $("#jq-hide").mouseover(function () {
+                $("#jq-h").hide();
+            });
+
+
+            $("#jq-show").click(function () {
+                $("#jq-h").addClass("red");
+            });
+
+            $("#jq-show").mouseover(function () {
+                $("#jq-h").show();
+            });
+
+            $("#jq-toggle").click(function () {
+                $("#jq-h").toggle();
+            });
+
+            $("#jq-add-class").click(function () {
+                setColorClass("red");
+            });
+            $("#jq-add-red").click(function () {
+                $("#jq-h").addClass("red");
+            });
+            $("#jq-add-blue").click(function () {
+                $("#jq-h").addClass("blue");
+            });
+
+            $("#jq-add-blue").click(function () {
+                setColorClass("blue");
+            });
+
+            $("#jq-add-brown").click(function () {
+                setColorClass("brown");
+            });
+
+            $("#jq-add-green").click(function () {
+                setColorClass("green");
+            });
+
+            $("#jq-remove-class").click(function () {
+                $("#jq-h").removeClass("red blue brown green");
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+    <h3 id="js-heading">JavaScript Heading</h3>
+    <button id="js-text">Change Text </button>
+    <button id="js-html">Change HTML </button>
+    <button id="js-hide">Hide </button>
+    <button id="js-show">Show </button>
+    <button id="js-toggle">Toggle </button>
+    <button id="js-add-red">Add red </button>
+    <button id="js-add-blue">Add blue </button>
+    <button id="js-add-brown">Add brown </button>
+    <button id="js-add-green">Add green </button>
+    <button id="js-remove-class">Remove Class </button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const heading = document.getElementById("js-heading");
+
+            function setColorClass(className) {
+                heading.classList.remove("red", "blue", "brown", "green");
+                heading.classList.add(className);
+            }
+
+            document.getElementById("js-text").addEventListener("click", function () {
+                heading.textContent = "Text changed with JavaScript";
+            });
+
+            document.getElementById("js-html").addEventListener("click", function () {
+                heading.innerHTML = "<b>Bold HTML changed with JavaScript</b>";
+            });
+
+            document.getElementById("js-hide").addEventListener("click", function () {
+                heading.style.display = "none";
+            });
+
+            document.getElementById("js-show").addEventListener("click", function () {
+                heading.style.display = "block";
+            });
+
+            document.getElementById("js-toggle").addEventListener("click", function () {
+                heading.style.display = (heading.style.display === "none") ? "block" : "none";
+            });
+
+            // Color buttons for JS
+            document.getElementById("js-add-red").addEventListener("click", function () {
+                setColorClass("red");
+            });
+
+            document.getElementById("js-add-blue").addEventListener("click", function () {
+                setColorClass("blue");
+            });
+
+            document.getElementById("js-add-brown").addEventListener("click", function () {
+                setColorClass("brown");
+            });
+
+            document.getElementById("js-add-green").addEventListener("click", function () {
+                setColorClass("green");
+            });
+
+            document.getElementById("js-remove-class").addEventListener("click", function () {
+                heading.classList.remove("red", "blue", "brown", "green");
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="abc">This  is my first program</h1>
+
+<button id="btn1">Button 1</button>
+<button id="btn2">Button 1</button>
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").dblclick(function () {
+            $("#abc").text("Button 1 clicked");
+        });
+    });
+
+    document.getElementById("btn2").addEventListener("click", function () {
+        document.getElementById("abc").textContent = "Button 1 clicked";
+    });
+</script>
+
+
+
+</body>
+
+</html>
