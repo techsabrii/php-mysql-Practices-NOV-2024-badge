@@ -17,8 +17,8 @@ class Cal
 }
 
 $calc    = new Cal();
-$calc->a = 6;
-$calc->b = 2;
+$calc->a = 8;
+$calc->b = 4;
 echo "Div: " . $calc->div() . "<br>";
 echo "Sub: " . $calc->sub() . "<br>";
 
@@ -101,7 +101,7 @@ echo "Multiply: " . $calc->multiply(5, 3) . "<br>";
 
 
 
-
+echo"<hr>";
 
 
 // Parent class (PHP version) Inheritance

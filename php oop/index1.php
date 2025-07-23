@@ -119,7 +119,6 @@ class test2 extends test1 {
 
 echo test1::displayName() . "<br>";
 
-$t = new test2();
+echo test2::displayName() . "<br>";
 
 
-echo $t->displayName() . "<br>";
