@@ -18,14 +18,27 @@ class Cal
 
 $calc    = new Cal();
 $calc->a = 6;
-$calc->b = 3;
+$calc->b = 2;
 echo "Div: " . $calc->div() . "<br>";
 echo "Sub: " . $calc->sub() . "<br>";
 
 
 
+echo "<hr>";
 
+class basit{
+    public $fname, $lname;
+    public function fullname(){
+        return $this->fname . " " . $this->lname;
+    }
+}
 
+$fullname = new basit();
+$fullname->fname = "Nadeem";
+$fullname->lname = "Ahmad";
+echo "Full Name: " . $fullname->fullname() . "<br>";
+
+echo "<hr>";
 
 
 // constructor method
@@ -34,7 +47,7 @@ class Ca
     private $a;
     private $b;
 
-    public function __construct($a = '', $b = '')
+    public function __construct($a, $b)
     {
         $this->a = $a;
         $this->b = $b;
@@ -60,7 +73,7 @@ echo "Multiply: " . $calc->multiply()."<br>";
 
 
 
-
+echo "<hr>";
 
 
 
@@ -107,6 +120,7 @@ class Animal {
 
 // Child class (inherits from Animal)
 class Dog extends Animal {
+
     private $breed;
 
     public function __construct($name, $breed) {
